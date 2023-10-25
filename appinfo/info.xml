@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<info>
+    <id>integration_alephalpha</id>
+    <name>Aleph Alpha integration</name>
+    <summary>Integration of Aleph Alpha services</summary>
+    <description><![CDATA[
+This app implements a free prompt provider which can be used together with the [Gpt Free Prompt app](https://apps.nextcloud.com/apps/gptfreeprompt).
+
+## Ethical AI Rating
+### Rating for Text generation using Aleph Alpha API: 🔴
+
+Negative:
+* the software for training and inference of this model is proprietary, limiting running it locally or training by yourself
+* the trained model is not freely available, so the model can not be run on-premises
+* the training data is not freely available, limiting the ability of external parties to check and correct for bias or optimise the model's performance and CO2 usage.
+
+Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
+]]></description>
+    <version>1.0.0</version>
+    <licence>agpl</licence>
+    <author>Kate Döen</author>
+    <namespace>AlephAlpha</namespace>
+    <documentation>
+        <developer>https://github.com/nextcloud/integration_alephalpha</developer>
+    </documentation>
+    <category>integration</category>
+    <website>https://github.com/nextcloud/integration_alephalpha</website>
+    <bugs>https://github.com/nextcloud/integration_alephalpha/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="27.1.0" max-version="28"/>
+    </dependencies>
+    <settings>
+        <admin>OCA\AlephAlpha\Settings\Admin</admin>
+        <admin-section>OCA\AlephAlpha\Settings\AdminSection</admin-section>
+        <personal>OCA\AlephAlpha\Settings\Personal</personal>
+        <personal-section>OCA\AlephAlpha\Settings\PersonalSection</personal-section>
+    </settings>
+</info>
