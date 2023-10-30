@@ -25,10 +25,8 @@ declare(strict_types=1);
 
 namespace OCA\AlephAlpha\TextProcessing;
 
-use OCA\AlephAlpha\AppInfo\Application;
 use OCA\AlephAlpha\Service\AlephAlphaService;
 use OCP\DB\Exception;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\TextProcessing\FreePromptTaskType;
 use OCP\TextProcessing\IProvider;

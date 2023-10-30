@@ -25,12 +25,11 @@ declare(strict_types=1);
 
 namespace OCA\AlephAlpha\Settings;
 
+use OCA\AlephAlpha\AppInfo\Application;
 use OCA\AlephAlpha\Service\AlephAlphaService;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
-use OCP\IConfig;
 use OCP\Settings\ISettings;
-use OCA\AlephAlpha\AppInfo\Application;
 
 class Admin implements ISettings {
 

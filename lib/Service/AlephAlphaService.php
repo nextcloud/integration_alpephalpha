@@ -108,7 +108,7 @@ class AlephAlphaService {
 
 			if ($method === 'GET') {
 				$response = $this->client->get($url, $options);
-			} else if ($method === 'POST') {
+			} elseif ($method === 'POST') {
 				$response = $this->client->post($url, $options);
 			} else {
 				return ['error' => $this->l10n->t('Bad HTTP method')];

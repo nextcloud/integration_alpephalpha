@@ -11,6 +11,12 @@
         "guzzlehttp/guzzle": "^7.8"
     },
 	"require-dev": {
-		"nextcloud/ocp": "v27.1.0"
+		"nextcloud/ocp": "v27.1.0",
+        "nextcloud/coding-standard": "^1.1"
+	},
+	"scripts": {
+		"cs:check": "php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "php-cs-fixer fix",
+		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l"
 	}
 }
