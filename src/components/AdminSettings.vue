@@ -110,16 +110,17 @@ export default {
 			return !!this.state.api_key
 		},
 		formattedModels() {
-			if (this.models) {
-				return this.models.map(m => {
-					return {
-						id: m.name,
-						value: m.name,
-						label: m.name,
-					}
-				})
+			if (!this.models) {
+				return []
 			}
-			return []
+
+			return this.models.map(m => {
+				return {
+					id: m.name,
+					value: m.name,
+					label: m.name,
+				}
+			})
 		},
 	},
 
@@ -137,6 +138,9 @@ export default {
 			return axios.get(url)
 				.then((response) => {
 					this.models = response.data?.data
+					if (!this.models) {
+						return
+					}
 					const defaultModelId = this.state.completion_model ?? response.data?.completion_model
 					const defaultModel = this.models.find(m => m.name === defaultModelId)
 					const modelToSelect = defaultModel
