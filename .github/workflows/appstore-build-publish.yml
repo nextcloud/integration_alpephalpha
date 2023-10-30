@@ -113,7 +113,7 @@ jobs:
           cd ${{ env.APP_NAME }}
           krankerl package
 
-      - name: Package ${{ env.APP_NAME }} ${{ env.APP_VERSION }} with Makefile
+      - name: Package ${{ env.APP_NAME }} ${{ env.APP_VERSION }} with makefile
         if: steps.krankerl.outputs.files_exists != 'true'
         run: |
           cd ${{ env.APP_NAME }}
