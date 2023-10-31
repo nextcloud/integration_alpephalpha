@@ -26,7 +26,7 @@
 					https://app.aleph-alpha.com/profile
 				</a>
 			</p>
-			<div v-if="models"
+			<div v-if="configured && models"
 				class="line">
 				<label for="size">
 					{{ t('integration_alephalpha', 'Default completion model to use') }}
@@ -164,9 +164,13 @@ export default {
 		},
 		onApiKeySet() {
 			this.saveOptions({ api_key: this.state.api_key })
-			if (this.configured) {
-				this.getModels()
-			}
+				.then(() => {
+					if (this.configured) {
+						this.getModels()
+					} else {
+						this.models = null
+					}
+				})
 		},
 		onRequestTimeoutSet() {
 			this.saveOptions({ request_timeout: this.state.request_timeout })
