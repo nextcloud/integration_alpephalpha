@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "41459860ed592f49c8686d3c1cd223f8",
+    "content-hash": "4a7029331ce8d616b8748f36f54bd20b",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -647,29 +647,30 @@
         },
         {
             "name": "nextcloud/ocp",
-            "version": "v27.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextcloud-deps/ocp.git",
-                "reference": "10d5e8430930a2f18e4c3a2053fb32348853bb78"
+                "reference": "e2fc12d2747886faabf2f1edd69fb19b0873e00a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/10d5e8430930a2f18e4c3a2053fb32348853bb78",
-                "reference": "10d5e8430930a2f18e4c3a2053fb32348853bb78",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/e2fc12d2747886faabf2f1edd69fb19b0873e00a",
+                "reference": "e2fc12d2747886faabf2f1edd69fb19b0873e00a",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ~8.0 || ~8.1",
+                "php": "~8.0 || ~8.1 || ~8.2",
                 "psr/clock": "^1.0",
                 "psr/container": "^2.0.2",
                 "psr/event-dispatcher": "^1.0",
                 "psr/log": "^1.1.4"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-stable27": "27.0.0-dev"
+                    "dev-master": "28.0.0-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -685,9 +686,9 @@
             "description": "Composer package containing Nextcloud's public API (classes, interfaces)",
             "support": {
                 "issues": "https://github.com/nextcloud-deps/ocp/issues",
-                "source": "https://github.com/nextcloud-deps/ocp/tree/v27.1.0"
+                "source": "https://github.com/nextcloud-deps/ocp/tree/master"
             },
-            "time": "2023-09-07T00:30:04+00:00"
+            "time": "2023-11-11T00:31:29+00:00"
         },
         {
             "name": "php-cs-fixer/shim",
@@ -945,7 +946,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nextcloud/ocp": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
