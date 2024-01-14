@@ -11,7 +11,7 @@
         "guzzlehttp/guzzle": "^7.8"
     },
 	"require-dev": {
-		"nextcloud/ocp": "dev-master",
+		"nextcloud/ocp": "dev-stable27",
         "nextcloud/coding-standard": "^1.1"
 	},
 	"scripts": {
