@@ -1,57 +1,57 @@
 {
-	"name": "integration_alephalpha",
-	"version": "0.0.1",
-	"description": "Aleph Alpha integration",
-	"main": "index.js",
-	"directories": {
-		"test": "tests"
-	},
-	"scripts": {
-		"build": "NODE_ENV=production webpack --progress --config webpack.js",
-		"dev": "NODE_ENV=development webpack --progress --config webpack.js",
-		"watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
-		"lint": "eslint --ext .js,.vue src",
-		"lint:fix": "eslint --ext .js,.vue src --fix",
-		"stylelint": "stylelint src/**/*.vue src/**/*.scss src/**/*.css",
-		"stylelint:fix": "stylelint src/**/*.vue src/**/*.scss src/**/*.css --fix"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/nextcloud/integration_alephalpha"
-	},
-	"keywords": [
-		"aleph",
-		"alpha"
-	],
-	"author": "Kate Döen",
-	"license": "AGPL-3.0",
-	"bugs": {
-		"url": "https://github.com/nextcloud/integration_alephalpha/issues"
-	},
-	"homepage": "https://github.com/nextcloud/integration_alephalpha",
-	"browserslist": [
-		"extends @nextcloud/browserslist-config"
-	],
-	"engines": {
-		"node": "^20.0.0",
-		"npm": "^10.0.0"
-	},
-	"dependencies": {
-		"@nextcloud/axios": "^2.4.0",
-		"@nextcloud/dialogs": "^4.2.1",
-		"@nextcloud/initial-state": "^2.1.0",
-		"@nextcloud/l10n": "^2.2.0",
-		"@nextcloud/router": "^2.2.0",
-		"@nextcloud/vue": "^7.12.6",
-		"vue": "^2.7.15",
-		"vue-material-design-icons": "^5.2.0"
-	},
-	"devDependencies": {
-		"@nextcloud/browserslist-config": "^3.0.0",
-		"@nextcloud/eslint-config": "^8.3.0",
-		"@nextcloud/stylelint-config": "^2.3.1",
-		"@nextcloud/webpack-vue-config": "^6.0.0",
-		"eslint-webpack-plugin": "^4.0.1",
-		"stylelint-webpack-plugin": "^4.1.1"
-	}
+  "name": "integration_alephalpha",
+  "version": "0.0.1",
+  "description": "Aleph Alpha integration",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack --progress --config webpack.js",
+    "dev": "NODE_ENV=development webpack --progress --config webpack.js",
+    "watch": "NODE_ENV=development webpack --progress --watch --config webpack.js",
+    "lint": "eslint --ext .js,.vue src",
+    "lint:fix": "eslint --ext .js,.vue src --fix",
+    "stylelint": "stylelint src/**/*.vue src/**/*.scss src/**/*.css",
+    "stylelint:fix": "stylelint src/**/*.vue src/**/*.scss src/**/*.css --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nextcloud/integration_alephalpha"
+  },
+  "keywords": [
+    "aleph",
+    "alpha"
+  ],
+  "author": "Kate Döen",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nextcloud/integration_alephalpha/issues"
+  },
+  "homepage": "https://github.com/nextcloud/integration_alephalpha",
+  "browserslist": [
+    "extends @nextcloud/browserslist-config"
+  ],
+  "engines": {
+    "node": "^20.0.0",
+    "npm": "^10.0.0"
+  },
+  "dependencies": {
+    "@nextcloud/axios": "^2.4.0",
+    "@nextcloud/dialogs": "^4.2.1",
+    "@nextcloud/initial-state": "^2.1.0",
+    "@nextcloud/l10n": "^2.2.0",
+    "@nextcloud/router": "^2.2.0",
+    "@nextcloud/vue": "^7.12.6",
+    "vue": "^2.7.15",
+    "vue-material-design-icons": "^5.2.0"
+  },
+  "devDependencies": {
+    "@nextcloud/browserslist-config": "^3.0.0",
+    "@nextcloud/eslint-config": "^8.3.0",
+    "@nextcloud/stylelint-config": "^2.3.1",
+    "@nextcloud/webpack-vue-config": "^6.0.0",
+    "eslint-webpack-plugin": "^4.0.1",
+    "stylelint-webpack-plugin": "^4.1.1"
+  }
 }
