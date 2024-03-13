@@ -1,4 +1,6 @@
 # Unreleased
+
+# 1.0.2
 - Fix PHP 8.0 compatibility
 
 # 1.0.1
