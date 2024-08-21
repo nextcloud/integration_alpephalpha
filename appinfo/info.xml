@@ -16,7 +16,7 @@ Negative:
 
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
 ]]></description>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <licence>agpl</licence>
     <author>Kate Döen</author>
     <namespace>AlephAlpha</namespace>
@@ -27,7 +27,7 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
     <website>https://github.com/nextcloud/integration_alephalpha</website>
     <bugs>https://github.com/nextcloud/integration_alephalpha/issues</bugs>
     <dependencies>
-        <nextcloud min-version="27.1.0" max-version="29"/>
+        <nextcloud min-version="27.1.0" max-version="30"/>
     </dependencies>
     <settings>
         <admin>OCA\AlephAlpha\Settings\Admin</admin>
