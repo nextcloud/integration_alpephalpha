@@ -1,5 +1,8 @@
 # Unreleased
 
+# 1.0.4
+- Remove Nextcloud 27 support
+
 # 1.0.3
 - Support Nextcloud 30
 
