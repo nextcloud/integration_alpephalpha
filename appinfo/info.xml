@@ -31,8 +31,5 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
     </dependencies>
     <settings>
         <admin>OCA\AlephAlpha\Settings\Admin</admin>
-        <admin-section>OCA\AlephAlpha\Settings\AdminSection</admin-section>
-        <personal>OCA\AlephAlpha\Settings\Personal</personal>
-        <personal-section>OCA\AlephAlpha\Settings\PersonalSection</personal-section>
     </settings>
 </info>
