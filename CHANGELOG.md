@@ -1,4 +1,6 @@
 # Unreleased
+
+# 1.0.5
 - Move admin settings to the "Artificial Intelligence" section
 
 # 1.0.4
