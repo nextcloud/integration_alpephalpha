@@ -28,6 +28,7 @@ namespace OCA\AlephAlpha\Controller;
 use OCA\AlephAlpha\AppInfo\Application;
 use OCA\AlephAlpha\Service\AlephAlphaService;
 use OCP\AppFramework\Controller;
+use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IConfig;
 use OCP\IRequest;
@@ -49,6 +50,7 @@ class ConfigController extends Controller {
 	 * @param array $values key/value pairs to store in app config
 	 * @return DataResponse
 	 */
+	#[PasswordConfirmationRequired]
 	public function setAdminConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
 			$this->config->setAppValue(Application::APP_ID, $key, $value);

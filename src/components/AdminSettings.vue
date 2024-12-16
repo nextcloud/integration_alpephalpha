@@ -80,6 +80,9 @@ import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 
+import { confirmPassword } from '@nextcloud/password-confirmation'
+import '@nextcloud/password-confirmation/dist/style.css'
+
 export default {
 	name: 'AdminSettings',
 
@@ -175,7 +178,9 @@ export default {
 		onRequestTimeoutSet() {
 			this.saveOptions({ request_timeout: this.state.request_timeout })
 		},
-		saveOptions(values, notify = true) {
+		async saveOptions(values, notify = true) {
+			await confirmPassword()
+
 			const req = {
 				values,
 			}
