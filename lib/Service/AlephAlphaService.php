@@ -33,6 +33,7 @@ use OCP\Http\Client\IClient;
 use OCP\Http\Client\IClientService;
 use OCP\IConfig;
 use OCP\IL10N;
+use OCP\Security\ICrypto;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
@@ -46,6 +47,7 @@ class AlephAlphaService {
 		private LoggerInterface $logger,
 		private IL10N $l10n,
 		private IConfig $config,
+		private ICrypto $crypto,
 		IClientService $clientService,
 	) {
 		$this->client = $clientService->newClient();
@@ -87,7 +89,7 @@ class AlephAlphaService {
 	 */
 	public function request(string $method, string $endPoint, ?array $body = null): array {
 		try {
-			$apiKey = $this->config->getAppValue(Application::APP_ID, 'api_key');
+			$apiKey = $this->getApiKey();
 			if ($apiKey === '') {
 				return ['error' => 'An API key is required'];
 			}
@@ -137,7 +139,12 @@ class AlephAlphaService {
 	}
 
 	public function getApiKey(): string {
-		return $this->config->getAppValue(Application::APP_ID, 'api_key');
+		$value = $this->config->getAppValue(Application::APP_ID, 'api_key');
+		if ($value === '') {
+			return '';
+		}
+
+		return $this->crypto->decrypt($value);
 	}
 
 	public function getModel(): string {
