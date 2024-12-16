@@ -32,6 +32,7 @@ use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IConfig;
 use OCP\IRequest;
+use OCP\Security\ICrypto;
 
 class ConfigController extends Controller {
 
@@ -40,6 +41,7 @@ class ConfigController extends Controller {
 		IRequest $request,
 		private IConfig $config,
 		private AlephAlphaService $alephAlphaService,
+		private ICrypto $crypto,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -53,6 +55,10 @@ class ConfigController extends Controller {
 	#[PasswordConfirmationRequired]
 	public function setAdminConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
+			if ($key === 'api_key') {
+				$value = $this->crypto->encrypt($value);
+			}
+
 			$this->config->setAppValue(Application::APP_ID, $key, $value);
 		}
 		return new DataResponse(null);
