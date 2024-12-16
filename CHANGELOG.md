@@ -1,4 +1,5 @@
 # Unreleased
+- Move admin settings to the "Artificial Intelligence" section
 
 # 1.0.4
 - Remove Nextcloud 27 support
