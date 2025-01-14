@@ -1,4 +1,6 @@
 # Unreleased
+
+# 1.0.6
 - Support Nextcloud 31
 
 # 1.0.5
